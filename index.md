@@ -1,4 +1,4 @@
-### 하이
+### 이슈
 
 ---
 
@@ -15,20 +15,20 @@ var isLoading  : Observable<Bool> { return requestId.asObservable().map({ $0 != 
 
 ```swift
 func initIsLoading() {
-self.viewModel.isLoading.bindOnMain { [weak self] (isLoading) in
-if isLoading {
-self?.startAnimating()
-if let valueIsEmpty = self?.viewModel.cellTypes.value.isEmpty {
-if valueIsEmpty {
-self?.tableView?.tableFooterView?.isHidden = true
-}
-}
-} else {
-self?.stopAnimating()
-self?.tableView?.tableFooterView?.isHidden = false
-}
-}.disposed(by: disposeBag)
-}
+        self.viewModel.isLoading.bindOnMain { [weak self] (isLoading) in
+            if isLoading {
+                self?.startAnimating()
+                if let valueIsEmpty = self?.viewModel.cellTypes.value.isEmpty {
+                    if valueIsEmpty {
+                        self?.tableView?.tableFooterView?.isHidden = true
+                    }
+                }
+            } else {
+                self?.stopAnimating()
+                self?.tableView?.tableFooterView?.isHidden = false
+            }
+        }.disposed(by: disposeBag)
+    }
 ```
 
 이슈의 발생지점은 viewDidLoad()에서 뷰모델에 있는 API통신하는 함수를 직접 호출하면서 시작됬다.
@@ -52,12 +52,11 @@ let sequence: BehaviorRelay<Int?>  = BehaviorRelay<Int?>(value: nil)
 ```
 
 ```swift
-func initSequenceObservable() {
-self.viewModel.sequence.bindOnMain { [weak self] _ in
-self?.viewModel.loadDetailData()
-}.disposed(by: disposeBag)
-}
+    func initSequenceObservable() {
+        self.viewModel.sequence.bindOnMain { [weak self] _ in
+            self?.viewModel.loadDetailData()
+        }.disposed(by: disposeBag)
+    }
 ```
 
 시퀀스를 옵져버해서 값이 accept되면 API통신을 하게 수정하니 해결되었다.
-
