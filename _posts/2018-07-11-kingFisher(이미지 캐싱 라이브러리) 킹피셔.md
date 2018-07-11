@@ -1,3 +1,19 @@
+---
+layout: post
+title: "kingFisher(이미지 캐싱 라이브러리) 킹피셔"
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+image: 'http://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_760/v1504807239/morpheus_xdzgg1.jpg'
+category: 'blog'
+tag:
+- iOS
+- Swift
+- kingFisher
+- 이미지 캐시
+- 킹피셔
+twitter_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+introduction: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+---
+
 iOS 이미지 캐싱 라이브러리에는 여러가지가 있지만 많이 사용되는 것들로는
 
 - kingFisher(킹피셔)
@@ -46,6 +62,3 @@ cache.cleanExpiredDiskCache()
 보통적으로 kingFisher는 메모리 경고를 받으면 메모리 캐시를 제거하고 필요한 경우 만료되고 크기가 초과 된 캐시를 자동으로 정리합니다.
 
 때문에 일반적으로는 캐시를 직접 정리 할 필요가 없습니다.
-
-
-

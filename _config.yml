@@ -1,6 +1,43 @@
-theme: jekyll-theme-cayman
-title: 진스카이의 개발자국
+# Site Settings
+title: Jinsky의 개발자국
 email: wlsgksmf456@naver.com
-description: > 반갑습니닷!
-instagram_username: jinsky90
+description: iOS 개발자입니다 :)
+# baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://jinsky90.github.io" # the base hostname & protocol for your site
+# google_analytics: "UA-XXXXXXXX-X"
+
+# User Settings
+username: Jinsky의 개발자국
+user_description: iOS 개발자입니다 :) 저의 개 발자국을 남겨용
+disqus_username: disqus_username
+
+# Social Media
+# Remove the item if you don't need it
 github_username: jinsky90
+facebook_username: 01029543982
+# twitter_username: twitter_username
+instagram_username: hannnuly
+# linkedin_username: linkedin_username
+# medium_username: medium_username
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Plugins
+gems:
+  - jemoji
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+
+# Exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
