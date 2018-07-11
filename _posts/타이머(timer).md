@@ -1,0 +1,61 @@
+```swift
+let DEFAULT_VERIFY_TIME : Int = 120
+```
+
+몇분 몇초부터 타이머를 설정할 지 상수를 선언해줍니다.
+
+```swift
+var timer: Timer?
+var timeRemaining   : Int = 0
+```
+
+- 타이머 객체를 생성합니다.
+
+- 남은시간을 보여주기 위해 남은시간 객체를 생성해줍니다.
+
+```swift
+@objc func timerRunning() {
+    if self.timeRemaining == 0 {
+    // 남은 시간이(timeRemaining) 0초일 경우 멈춰주는 로직
+        self.timer.invalidate() // 타이머를 멈추는 메소드
+        self.timer = nil // 타이머를 비워줍니다.
+        return 
+    }
+    self.timerRemaining -= 1 // 1초마다 남은 시간이 1씩 차감된다.
+    let minutesLeft = Int(timeRemaining) / 60 % 60
+    let secondsLeft = Int(timeRemaining) % 60
+    // 초가 10초 미만인 경우에는 앞자리에 0을추가해서 출력해줍니다.
+    self.smsTimerLabel.text = secondsLeft < 10 ? \(minutesLeft):0\(secondsLeft)" : "\(minutesLeft):\(secondsLeft)"
+}
+```
+
+- 타이머를 시작하기 위한 메소드입니다.
+
+- timerRunning() 를 Timer의 seletoer에 등록해주면 설정해준 timeInterval마다 timerRunning()이 호출됩니다.
+
+시간이 0초 남았을 경우 타이머를 멈추기 위해 메소드가 호출될때마다 남은시간이 0초인지를 검사해줍니다.
+
+- 위에서 선언해준 timerRemaining(남은시간) 객체를 -1씩 차감해줍니다.
+
+- 초 구간이 10초 미만일경우 “0”을 추가하여 자릿수를 맞춰줍니다.
+
+```swift
+func startTimer() {
+    self.timeRemaining = self.DEFAULT_VERIFY_TIME // 남은시간 상수로 변수에 할당
+    self.timer.invalidate() // 혹시 타이머가 돌아가고 있을수도 있으니 타이머 정지
+    self.timer = nil // 혹시 타이머가 돌아가고 있을수도 있으니 타이머 비워줌
+    self.timer = Timer.scheduledTimer(timerInterval: 1.0, target: self, selector: #selector(self.timerRunning), userInfo: nil, repeats: true) // 타이머 객체 할당(시작)
+}
+```
+
+- 타이머를 시작하는 로직입니다.
+
+```swift
+func stopTimer() {
+    self.timer.invalidate()
+    self.timer = nil
+}
+```
+
+- 타이머를 정지하는 로직입니다.
+
