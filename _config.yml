@@ -36,8 +36,11 @@ links:
     url: /
   - title: About
     url: /about/
+  - title: Tag
+    url: /tag/
   - title: Contact
     url: /contact/
+
 
 # Exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
