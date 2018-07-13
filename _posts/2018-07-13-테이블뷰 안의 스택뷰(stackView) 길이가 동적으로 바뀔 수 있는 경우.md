@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "테이블뷰 안의 스택뷰(stackView) 길이가 동적으로 바뀔 수 있는 경우"
-description: 뷰의 height를 주는 경우라던지, 뷰 안의 프로퍼티들의 height를 잡아서 wrapView의 길이를 잡아주는 경우라던지
-공통적으로 줄어드는 뷰의 height constraint의 속성을 줄 때 두가지 방법이 있다.
-image: 'https://user-images.githubusercontent.com/38024119/42680236-5c4f858a-86bf-11e8-9401-53e4e61d1bfd.png'
+image: 'https://user-images.githubusercontent.com/38024119/42678500-06073b8c-86ba-11e8-8e70-74fab0c1ddb3.jpg'
 category: 'blog'
 tag:
 - iOS
