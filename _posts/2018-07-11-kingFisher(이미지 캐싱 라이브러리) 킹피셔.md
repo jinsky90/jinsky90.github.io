@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "kingFisher(이미지 캐싱 라이브러리) 킹피셔"
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 image: 'https://user-images.githubusercontent.com/38024119/42678500-06073b8c-86ba-11e8-8e70-74fab0c1ddb3.jpg'
 category: 'blog'
 tag:
@@ -10,8 +9,6 @@ tag:
 - kingFisher
 - 이미지 캐시
 - 킹피셔
-twitter_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-introduction: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
 iOS 이미지 캐싱 라이브러리에는 여러가지가 있지만 많이 사용되는 것들로는

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "공유하기 뷰 띄우기(UIActivityViewController)"
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 image: 'https://user-images.githubusercontent.com/38024119/42678500-06073b8c-86ba-11e8-8e70-74fab0c1ddb3.jpg'
 category: 'blog'
 tag:
@@ -9,8 +8,6 @@ tag:
 - iOS
 - Swift
 - UIActivityViewController
-twitter_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-introduction: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
 ```swift
